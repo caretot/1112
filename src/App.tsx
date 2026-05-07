@@ -340,11 +340,11 @@ export default function App() {
       <nav className="sticky top-0 z-50 bg-[#12141C] border-b border-gray-800 py-3 px-6 flex items-center justify-between shrink-0 transition-all duration-300">
         <div className="flex items-center gap-4">
           <div className="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-xl italic shadow-lg shadow-indigo-900/20">
-            S
+            M
           </div>
           <div className="flex flex-col">
             <span className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold leading-none mb-1">MatchDay Baku</span>
-            <span className="font-bold text-white text-sm leading-none tracking-tight">SOFASCORE PREVIEW</span>
+            <span className="font-bold text-white text-sm leading-none tracking-tight uppercase">Premium Preview</span>
           </div>
         </div>
         
@@ -944,11 +944,11 @@ export default function App() {
 
       <footer className="mt-12 text-center flex flex-col items-center gap-6 border-t border-gray-800/30 pt-12">
         <div className="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all cursor-default group">
-           <div className="w-8 h-8 bg-indigo-600 rounded-lg font-black text-xs italic flex items-center justify-center group-hover:rotate-12 transition-transform">S</div>
+           <div className="w-8 h-8 bg-indigo-600 rounded-lg font-black text-xs italic flex items-center justify-center group-hover:rotate-12 transition-transform">M</div>
            <span className="text-[11px] font-black uppercase tracking-[0.3em]">MatchDay Baku v2.0</span>
         </div>
         <p className="text-[9px] text-gray-600 font-bold uppercase tracking-[0.4em] max-w-[280px] leading-relaxed mx-auto">
-          Inspired by SofaScore • Designed for Baku Football Community • May 2026
+          Developed by Fuad Ildarov • Designed for Baku Football Community • May 2026
         </p>
       </footer>
     </div>
