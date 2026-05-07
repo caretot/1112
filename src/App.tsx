@@ -222,18 +222,18 @@ const processPlayers = (raw: any[], team: number) => {
 };
 
 const getPosition = (index: number, team: number) => {
-  const isTeam1 = team === 1;
+  // x: 0 (left) to 100 (right)
+  // y: 0 (goal line) to 100 (halfway line)
   const basePositions = [
-    { x: 50, y: 14 }, // GK (Increased border gap)
-    { x: 32, y: 42 }, // Def Left (Moved further towards center)
-    { x: 68, y: 42 }, // Def Right (Moved further towards center)
-    { x: 50, y: 70 }, // Midfield (Central hub)
-    { x: 32, y: 96 }, // Attacker Left (Safe distance from half-line)
-    { x: 68, y: 96 }, // Attacker Right (Safe distance from half-line)
+    { x: 50, y: 12 }, // GK (Safe gap from goal)
+    { x: 28, y: 40 }, // Defender Left (Moved inward for 2x margin)
+    { x: 72, y: 40 }, // Defender Right (Moved inward for 2x margin)
+    { x: 50, y: 68 }, // Midfielder (Clear gap from defenders)
+    { x: 28, y: 94 }, // Attacker Left (Near half-line, moved inward)
+    { x: 72, y: 94 }, // Attacker Right (Near half-line, moved inward)
   ];
   
-  const pos = basePositions[index];
-  return isTeam1 ? pos : { x: pos.x, y: 100 - pos.y };
+  return basePositions[index] || basePositions[0];
 };
 
 // --- Components ---
